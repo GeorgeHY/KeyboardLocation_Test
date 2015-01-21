@@ -14,6 +14,7 @@
 		5C8397401A6F4EFB0032ECCA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C83973F1A6F4EFB0032ECCA /* Images.xcassets */; };
 		5C8397431A6F4EFC0032ECCA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8397411A6F4EFC0032ECCA /* LaunchScreen.xib */; };
 		5C83974F1A6F4EFC0032ECCA /* KeyboardLocation_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C83974E1A6F4EFC0032ECCA /* KeyboardLocation_TestTests.m */; };
+		5C83975A1A6F58090032ECCA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8397591A6F58090032ECCA /* FirstViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		5C8397481A6F4EFC0032ECCA /* KeyboardLocation_TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardLocation_TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C83974D1A6F4EFC0032ECCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C83974E1A6F4EFC0032ECCA /* KeyboardLocation_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardLocation_TestTests.m; sourceTree = "<group>"; };
+		5C8397581A6F58090032ECCA /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		5C8397591A6F58090032ECCA /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				5C8397391A6F4EFB0032ECCA /* ViewController.h */,
 				5C83973A1A6F4EFB0032ECCA /* ViewController.m */,
 				5C83973C1A6F4EFB0032ECCA /* Main.storyboard */,
+				5C8397581A6F58090032ECCA /* FirstViewController.h */,
+				5C8397591A6F58090032ECCA /* FirstViewController.m */,
 				5C83973F1A6F4EFB0032ECCA /* Images.xcassets */,
 				5C8397411A6F4EFC0032ECCA /* LaunchScreen.xib */,
 				5C8397321A6F4EFB0032ECCA /* Supporting Files */,
@@ -222,6 +227,7 @@
 				5C83973B1A6F4EFB0032ECCA /* ViewController.m in Sources */,
 				5C8397381A6F4EFB0032ECCA /* AppDelegate.m in Sources */,
 				5C8397351A6F4EFB0032ECCA /* main.m in Sources */,
+				5C83975A1A6F58090032ECCA /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +349,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kun Qian (JMA3R7BDJ5)";
 				INFOPLIST_FILE = KeyboardLocation_Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "72ac487b-57be-427f-90e3-7833a0eac1b7";
 			};
 			name = Debug;
 		};
@@ -353,9 +361,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kun Qian (JMA3R7BDJ5)";
 				INFOPLIST_FILE = KeyboardLocation_Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "72ac487b-57be-427f-90e3-7833a0eac1b7";
 			};
 			name = Release;
 		};
