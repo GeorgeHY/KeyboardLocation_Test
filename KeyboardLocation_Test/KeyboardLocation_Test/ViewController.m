@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dataArr = [[NSArray alloc]initWithObjects:@"1",@"2",@"3", nil];
+    self.dataArr = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6", nil];
 }
 
 - (void)didReceiveMemoryWarning {
