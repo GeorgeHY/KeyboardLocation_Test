@@ -19,7 +19,7 @@
 }
 
 
-@property (weak, nonatomic) IBOutlet UITableView *tv;
+@property (strong, nonatomic)  UITableView *tv;
 @property (strong, nonatomic) UIView * headView;
 @property (strong, nonatomic) UITextView * inputView;
 @property (strong, nonatomic) UITableViewCell * currentCell;
@@ -31,7 +31,8 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tv  = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen]bounds].size.width, [[UIScreen mainScreen]bounds].size.height)];
+    [self.view addSubview:self.tv];
     self.tv.delegate = self;
     self.tv.dataSource = self;
     
@@ -47,6 +48,8 @@
     self.inputView.delegate = self;
     self.inputView.backgroundColor = [UIColor greenColor];
     [self.view addSubview:self.inputView];
+    
+    
     //保存原始frame以便初始化
     _originInputFrame = self.inputView.frame;
     _originTVFrame = self.tv.frame;
