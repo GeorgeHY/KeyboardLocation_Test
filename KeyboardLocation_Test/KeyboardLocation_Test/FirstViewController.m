@@ -7,7 +7,7 @@
 //
 
 #import "FirstViewController.h"
-#define kCellHeight 200
+#define kCellHeight 100
 @interface FirstViewController() <UITableViewDelegate,UITableViewDataSource,UITextViewDelegate>
 
 {
@@ -24,6 +24,7 @@
 @property (strong, nonatomic) UITextView * inputView;
 @property (strong, nonatomic) UITableViewCell * currentCell;
 @property (strong, nonatomic) NSIndexPath * currentIndex;
+@property (strong, nonatomic) NSIndexPath * displayIndex;//回复后显示index
 @end
 
 @implementation FirstViewController
@@ -72,7 +73,9 @@
     currentTvFrame.size.height = currentTvFrame.size.height -frame1.size.height-_keyBoardFrame.size.height;
 
     //定位回复的cell
-    [self.tv setContentOffset:CGPointMake(0,self.currentIndex.row * kCellHeight-self.navigationController.navigationBar.frame.size.height-frame2.size.height) animated:YES];
+//    [self.tv setContentOffset:CGPointMake(0,self.currentIndex.row * kCellHeight-self.navigationController.navigationBar.frame.size.height-frame2.size.height) animated:YES];
+
+    [self.tv scrollToRowAtIndexPath:_currentIndex atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     self.tv.scrollEnabled = NO;
     
     [UIView animateWithDuration:duration animations:^{
@@ -93,6 +96,8 @@
         
         self.inputView.frame = _originInputFrame;
         self.tv.frame = _originTVFrame;
+        
+        
         [self.tv scrollToRowAtIndexPath:self.currentIndex atScrollPosition:UITableViewScrollPositionMiddle animated:YES];//是回复的cell居中显示
         self.tv.scrollEnabled = YES;
         
@@ -132,7 +137,11 @@
 -(void)replyAction:(UIButton*)sender{
     UIView * contentview = [sender superview];
     self.currentCell = (UITableViewCell *)[contentview superview];
+
     self.currentIndex = [self.tv indexPathForCell:self.currentCell];
+    NSLog(@"self.currentIndex.row = %ld",self.currentIndex.row);
+    
+    
     [self.inputView becomeFirstResponder];
 
 }
