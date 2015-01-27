@@ -351,6 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Kun Qian (JMA3R7BDJ5)";
 				INFOPLIST_FILE = KeyboardLocation_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "72ac487b-57be-427f-90e3-7833a0eac1b7";
@@ -363,6 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Kun Qian (JMA3R7BDJ5)";
 				INFOPLIST_FILE = KeyboardLocation_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "72ac487b-57be-427f-90e3-7833a0eac1b7";
@@ -422,6 +424,7 @@
 				5C8397541A6F4EFC0032ECCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C8397551A6F4EFC0032ECCA /* Build configuration list for PBXNativeTarget "KeyboardLocation_TestTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +433,7 @@
 				5C8397571A6F4EFC0032ECCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -142,7 +142,7 @@
     self.currentCell = (UITableViewCell *)[contentview superview];
 
     self.currentIndex = [self.tv indexPathForCell:self.currentCell];
-    NSLog(@"self.currentIndex.row = %ld",self.currentIndex.row);
+//    NSLog(@"self.currentIndex.row = %ld",self.currentIndex.row);
     
     
     [self.inputView becomeFirstResponder];
