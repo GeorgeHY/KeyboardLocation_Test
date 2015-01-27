@@ -78,7 +78,7 @@
     //定位回复的cell
 //    [self.tv setContentOffset:CGPointMake(0,self.currentIndex.row * kCellHeight-self.navigationController.navigationBar.frame.size.height-frame2.size.height) animated:YES];
 
-    [self.tv scrollToRowAtIndexPath:_currentIndex atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    [self.tv scrollToRowAtIndexPath:self.currentIndex atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     self.tv.scrollEnabled = NO;
     
     [UIView animateWithDuration:duration animations:^{
@@ -103,7 +103,7 @@
         
         [self.tv scrollToRowAtIndexPath:self.currentIndex atScrollPosition:UITableViewScrollPositionMiddle animated:YES];//是回复的cell居中显示
         self.tv.scrollEnabled = YES;
-        
+        self.currentIndex = 0;
         //此处可添加回复请求等
         
         return NO;
@@ -156,6 +156,8 @@
     self.tv.frame = _originTVFrame;
     [self.tv scrollToRowAtIndexPath:self.currentIndex atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
     self.tv.scrollEnabled = YES;
+    self.currentIndex = 0;
+    
 
 
 
